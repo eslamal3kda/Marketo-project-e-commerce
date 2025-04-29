@@ -1,0 +1,52 @@
+// @media (max-width: 1320px) {
+//     .container{
+//         margin-inline:6rem ;
+//     }
+// }
+@media (max-width: 1240px) {
+    .x-padding {
+        padding-inline: 4rem;
+    }
+    .container{
+        margin-inline:4rem ;
+    }
+}
+@media (max-width: 1040px) {
+    .x-padding {
+        padding-inline: 2rem;
+    }
+    .container{
+        margin-inline:2rem ;
+    }
+    h1 {
+        font-size: 2.3rem;
+    }
+    h2 {
+        font-size: 2.1rem;
+    }
+    h3 {
+        font-size: 1.9rem;
+    }
+    h4 {
+        font-size: 1.7rem;
+    }
+    h5 {
+        font-size: 1.5rem;
+    }
+    h6 {
+        font-size: 1.3rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    
+}
+
+@media (max-width:500px) {
+    .x-padding {
+        padding-inline: 1rem;
+    }
+    .container{
+        margin-inline:1rem ;
+    }
+}

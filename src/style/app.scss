@@ -1,0 +1,49 @@
+@import './global/variables' ;
+@import './global/reset' ;
+@import './global/responsive' ;
+@import '../layout/1-Navbar/navbar';
+@import '../layout/1-Navbar/navbar-responsive';
+@import '../layout/2-Footer/footer';
+@import '../layout/2-Footer/footer-responsive';
+@import '../pages/HomePage/homepage';
+@import '../components/SelectMenu/selectMenu';
+// @import '../components/EmailSubmitInput/emailSibmitInput';
+@import '../components/paginationSection/paginationSection';
+@import '../components/sponsors/sponsors';
+@import '../components/OfferComponent/offerComponent';
+@import '../components/featuredProducts/featuredProducts';
+@import '../components/ProductCard/productCard';
+@import '../pages/HomePage/homePage-responsive';
+@import '../components/HeroSection/heroSection';
+@import '../components/TodayGadgetsSection/todayGadgetsSection.scss';
+@import '../components/BestDeals/bestDeals';
+@import '../components/contactBar/contactBar';
+@import '../components/DealOfTheDaySection/dealOfTheDaySection';
+@import '../components/FilterTabs/filterTabs';
+@import '../components/SpecialHeading/specialHeading';
+@import '../components/StatisticComponent/statisticComponent';
+@import '../components/TeamMemberCard/teamMemberCard';
+@import '../components/ProductsByCategory/productsByCategory';
+@import '../components/ProductPopUp/productPopUp';
+@import '../components/Loader/loader';
+@import '../components/WrapperInput/wrapperInput';
+@import '../components/BlogCard/blogCard';
+@import '../pages/FAQPage/faqPage';
+@import '../pages/ProductsPage/productsPage';
+@import '../pages/ShopPage/shopPage';
+@import '../pages/ContactPage/contactPage';
+@import '../pages/TermsAndConditionsPage/termsAndConditions';
+@import '../pages/AboutPage/aboutUsPage';
+@import '../pages/BlogsPage/blogsPage';
+
+
+
+
+.page-test {
+    min-height: 80vh;
+}
+
+// .page-test  {
+//     display: flex;
+//     flex-wrap: wrap;
+// }

@@ -1,0 +1,49 @@
+.global-contact-bar {
+    height: 40vh;
+    width: 100%;
+    background-color: #f9f9f9;
+    & .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+    }
+    &-header {
+        h3{
+            font-weight: 400;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+    }
+    &-form {
+        input {
+            width: 100%;
+        }
+        button {
+            background-color: $main-color;
+            color: #FFF;
+        }
+    }
+}
+
+@media(max-width:767px){
+    .global-contact-bar {
+        .container {
+            flex-direction: column;
+        }
+    }
+}
+
+@media(max-width:550px){
+    .global-contact-bar {
+        .container{
+            .global-contact-bar-form{
+                width: 100%;
+            }
+        }
+    }
+}

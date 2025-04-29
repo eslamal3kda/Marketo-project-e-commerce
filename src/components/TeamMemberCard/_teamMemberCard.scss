@@ -1,0 +1,49 @@
+.team-member-card {
+    width: 255px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .team-member-image{
+        width: 100%;
+        margin-bottom: 30px;
+        position: relative;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+        &:hover .overlay {
+            height: 100%;
+            svg {
+                opacity: 1;
+            }
+        }
+        .overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            transition: 0.3s;
+            height: 0;
+            background-color: #0000009b;
+            svg {
+                font-size: 20px;
+                cursor: pointer;
+                color: #fff;
+                opacity: 0;
+                transition: 0.3s;
+            }
+        }
+    }
+    .job-title {
+        color: $main-color;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+    .team-member-name {
+        text-transform: capitalize;
+    }
+}

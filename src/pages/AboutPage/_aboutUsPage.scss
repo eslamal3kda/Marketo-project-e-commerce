@@ -1,0 +1,126 @@
+.about-page {
+    .special-story {
+        background-color: #f9f9f9;
+    }
+    .container {
+        margin-block: 50px;
+        padding-block: 50px;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    &-content,
+    &-image {
+        width: calc((100% - 16px) / 2);
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        .vision-content {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            span {
+                font-size:14px;
+            }
+        }
+    }
+    &-image {
+        display: flex;
+        justify-content: flex-end;
+        img {
+            &:hover {
+                scale: 1.01;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    .statistic-container {
+        margin-top: 40px;
+        display: flex;
+        gap: 16px;
+    }
+
+    .team-members {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 24px;
+    }
+}
+
+
+@media (max-width: 519px) {
+    .about-page {
+        .container {
+            flex-direction: column;
+        }
+        &-content,
+        &-image {
+            width: 100%;
+            img {
+                margin: 20px auto;
+                width: 95%;
+                object-fit: cover;
+            }
+        }
+        .team-members {
+            justify-content: center;
+        }
+    }
+}
+@media (min-width: 520px) {
+    .about-page {
+        .container {
+            flex-direction: column;
+        }
+        &-content,
+        &-image {
+            width: 100%;
+            img {
+                width: 450px;
+                margin: 20px auto;
+            }
+        }
+        .team-members {
+            .team-member-card {
+                width: calc((100% - 24px) / 2);
+            }
+        }
+    }
+}
+@media(min-width:768px){
+    .about-page {
+        .team-members {
+            .team-member-card {
+                width: calc((100% - 48px) / 3);
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-page {
+        .container {
+            flex-direction: row;
+            &-vision {
+                flex-direction: row-reverse;
+            }
+            &-team {
+                flex-direction: column;
+            }
+        }
+        &-content,
+        &-image {
+            width: calc((100% - 16px) / 2);
+        }
+        .team-members {
+            .team-member-card {
+                width: calc((100% - 72px) / 4);
+            }
+        }
+    }
+}

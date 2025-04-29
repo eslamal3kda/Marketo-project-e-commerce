@@ -1,0 +1,6 @@
+.custom-btn {
+    border: 1px solid;
+    padding: 1rem 2rem;
+    text-transform: capitalize;
+    border-radius: 8px;
+}

@@ -1,0 +1,108 @@
+.best-deals-section {
+    min-height: 120vh;
+    background-color: #f9f9f9;
+    padding-block: 4rem;
+    .best-deals-container {
+        display: flex;
+        gap: 3rem;
+        .best-deals-banner {
+            width: 250px;
+            flex-shrink: 0;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .best-deals-products {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            &-container {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 1px;
+                .product-card {
+                    width: calc((100% - 2px) / 3);
+                    background-color: #FFF;
+                    height: 20rem;
+                    transition: 0.3s;
+                    align-items: center;
+                    justify-content: center;
+                    &:hover {
+                        box-shadow: 0 2px 20px 0 rgba(144, 144, 144, 0.2);;
+                        z-index: 2;
+                    }
+                    &-image {
+                        height: 150px;
+                        img {
+                            object-fit: cover;
+                        }
+                    }
+                    &-content {
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:767px) {
+    .best-deals-section {
+        .best-deals-container {
+            .best-deals-banner {
+                display: none;
+            }
+            .best-deals-products {
+                &-container {
+                    .product-card {
+                        align-items: center;
+                        width: 100%;
+                        &-image {
+                            width: 250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .best-deals-section {
+        .best-deals-container {
+            .best-deals-banner {
+                display: none;
+            }
+            .best-deals-products {
+                &-container {
+                    .product-card {
+                        align-items: center;
+                        width: calc((100% - 2px) / 3);
+                        &-image {
+                            width: 180px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .best-deals-section {
+        .best-deals-container {
+            .best-deals-banner {
+                display: flex;
+                transition: 0.4s;
+                &:hover {
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

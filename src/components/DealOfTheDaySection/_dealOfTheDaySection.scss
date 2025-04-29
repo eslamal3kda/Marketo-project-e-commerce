@@ -1,0 +1,161 @@
+.deal-of-the-day-section {
+    height: 100vh;
+    margin-block: 4rem;
+    background-color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    // flex-direction: column ;
+    .deal-of-the-day-content {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        &-image {
+            // margin-block: auto;
+            padding-block: 2rem;
+            width: 600px;
+            img {
+                width: 100%;
+            }
+        }
+        &-details {
+            display: flex;
+            flex-direction: column;
+            .product-title {
+                color: #62acff;
+                text-transform: capitalize;
+                font-size: 1.4rem;
+            }
+            .product-name {
+                text-transform: capitalize;
+                // font-size: 1.3rem;
+                color: #1c1c24;
+            }
+            .price-details {
+                .old-price {
+                    color: #939292;
+                    margin-right: 1rem;
+                }
+                .recent-price {
+                    color: #fff;
+                }
+            }
+            .deal-content-btns {
+                display: flex;
+                gap: 1rem;
+                button {
+                    transition: 0.4s;
+                    color: #fff;
+                    border-color: #ffffff3d;
+                }
+                button:hover {
+                    background-color: #1c1c24;
+                }
+                .buy-now {
+                    background-color: transparent;
+                }
+                .view-collections {
+                    background-color: $offer-color;
+                }
+            }
+        }
+    }
+    .watermark {
+        color: #0869d5;
+        font-size: 8rem;
+        text-transform: capitalize;
+        font-weight: 800;
+        text-align: center;
+        position: absolute;
+        bottom: 110px;
+        letter-spacing: -8px;
+    }
+    .navigation-btns {
+        position: absolute;
+        bottom: 50%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-inline: 3rem;
+        font-size: 1.8rem;
+        color: #ffffff5c;
+        svg {
+            z-index: 4;
+            cursor: pointer;
+            margin-inline: 1rem;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .deal-of-the-day-section {
+        .deal-of-the-day-content {
+            flex-direction: column;
+            &-image {
+                width: 100%;
+                padding-block: 1rem;
+                img {
+                    object-fit: cover;
+                }
+            }
+            &-details {
+                font-size: 1.8rem;
+                align-items: center;
+                .product-name {
+                    font-size: 1.4rem;
+                    margin-block: 4px 24px;
+                }
+                .price-details {
+                    margin-bottom: 16px;
+                }
+                .deal-content-btns {
+                    gap: 8px;
+                }
+            }
+        }
+        .watermark {
+            display: none;
+        }
+        .navigation-btns {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .deal-of-the-day-section {
+        .deal-of-the-day-content {
+            flex-direction: row;
+            &-image,
+            &-details {
+                width: calc((100%) / 2);
+            }
+            &-details {
+                align-items: flex-start;
+                font-size: 1.4rem;
+                .product-name {
+                    font-size: 1.4rem;
+                    margin-block: 4px 24px;
+                }
+                .price-details {
+                    margin-bottom: 16px;
+                }
+                .deal-content-btns {
+                    gap: 8px;
+                }
+            }
+        }
+        .watermark {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .deal-of-the-day-section {
+        .watermark {
+            display: block;
+        }
+    }
+}

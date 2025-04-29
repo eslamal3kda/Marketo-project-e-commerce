@@ -1,0 +1,40 @@
+.wrapper-input {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+    &:focus-within label {
+        color: $input-color;
+    }
+    input,
+    textarea {
+        width: 100%;
+        padding: 16px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        transition: 0.2s;
+        &:focus {
+            border-color: $input-color;
+        }
+    }
+    textarea {
+        height: 150px;
+        resize: none;
+    }
+    label {
+        padding-inline: 2px;
+        transition: 0.2s;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        transition: 0.2s;
+        position: absolute;
+        top: -12px;
+        left: 12px;
+        background-color: #fff;
+        color: #777;
+    }
+    .error-message {
+        color: $error-color
+    }
+}

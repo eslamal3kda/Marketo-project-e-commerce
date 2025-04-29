@@ -1,0 +1,117 @@
+.product-card {
+    width: 20rem;
+    height: 25rem;
+    border: 1px solid #2d2d2d2d;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    &-image {
+        width: 100%;
+        height: 13.5rem;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            transition: 0.3s;
+        }
+        &:hover &-icons {
+            bottom: 0;
+            opacity: 1;
+        }
+        &-icons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            transition: 0.5s;
+            bottom: -32px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            .single-icon {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                transition: 0.3s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover {
+                    background-color: $offer-color;
+                    svg {
+                        color: #FFF;
+                    }
+                }
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        &:hover{
+            img {
+                opacity: 0.8;
+            }
+            &-icons {
+
+                translate:0 -3rem;
+            }
+        }
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        &-title {
+            font-size: 0.8rem;
+            color: #999;
+        }
+        &-price {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            del{
+                color: #999;
+            }
+            &-current {
+                color: $offer-color;
+            }
+        }
+        &-details {
+            font-size: 0.8rem;
+            color: #787878;
+            display: -webkit-box;             
+            -webkit-box-orient: vertical;     
+            -webkit-line-clamp: 2;            
+            line-clamp: 2;            
+            overflow: hidden;               
+            text-overflow: ellipsis;
+        }
+    }
+    &-image:hover .product-card-rating {
+        opacity: 1;
+        top: 0;
+    }
+    &-rating {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        right: 1rem;
+        transition: 0.3s;
+        top: -3rem;
+        opacity: 0;
+        svg {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            color: gold;
+        }
+    }
+}

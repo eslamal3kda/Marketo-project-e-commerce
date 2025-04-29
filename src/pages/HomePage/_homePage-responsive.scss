@@ -1,0 +1,22 @@
+@media(max-width:1000px){
+    .home-page {
+        .home-pagination-section{
+            .single-pagination-container {
+                .single-pagination-header{
+                    &-title {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+        .contact-bar{
+            &-layout {
+                width: 100%;
+                padding: 3rem 0;
+                &.send-email {
+                    
+                }
+            }
+        }
+    }
+}

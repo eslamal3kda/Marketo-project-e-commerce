@@ -28,7 +28,7 @@ export default function ProductsByCategory({categoryName,categoryClass}) {
                     </Swiper>
                 </div>
                 <div className="category-products">
-                    {arr.map((product) => <ProductCard productName={"Test "} imageURL={"./src/assets/images/game_controller_31.png"} productPrice={"20"} productOldPrice={"30"} />).slice(0, 8)}
+                    {arr.map((product) => <ProductCard key={product} productName={"Test "} imageURL={"./src/assets/images/game_controller_31.png"} productPrice={"20"} productOldPrice={"30"} />).slice(0, 8)}
                 </div>
             </div>
         </>

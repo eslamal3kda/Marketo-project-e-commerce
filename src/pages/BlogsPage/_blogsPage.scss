@@ -3,6 +3,7 @@
         display: flex;
         gap: 2rem;
         padding-block: 3rem;
+        // flex-direction: column;
         .blogs-navigation {
             width: 16rem;
             height: 70vh;
@@ -49,11 +50,33 @@
                 }
             }
         }
+        .blogs-content-box {
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            .blogs-filter {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                border-bottom: 1px solid #0001;
+                padding-bottom: 1rem;
+                display: none;
+                .single-categ {
+                    padding: 12px;
+                        background-color: $dark-main-color;
+                        color: #eee;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        width: fit-content;
+                }
+            }
+        }
         section.blogs-container {
             flex-grow: 1;
             display: flex;
             flex-flow: row wrap;
             gap: 1rem;
+            margin-block: 2rem;
             .blog-card {
                 width: calc((100% - 2rem) / 3);
             }
@@ -77,6 +100,11 @@
             .blogs-navigation {
                 display: none;
             }
+            .blogs-content-box {
+                .blogs-filter {
+                    display: flex;
+                }
+            }
             section.blogs-container {
                 justify-content: center;
                 .blog-card {
@@ -92,6 +120,11 @@
             .blogs-navigation {
                 display: none;
             }
+            .blogs-content-box {
+                .blogs-filter {
+                    display: flex;
+                }
+            }
             section.blogs-container {
                 justify-content: flex-start;
                 .blog-card {
@@ -104,6 +137,11 @@
 @media(min-width:768px){
     .blogs-page {
         .container {
+            .blogs-content-box {
+                .blogs-filter {
+                    display: none;
+                }
+            }
             .blogs-navigation {
                 display: flex;
                 width: 14rem;

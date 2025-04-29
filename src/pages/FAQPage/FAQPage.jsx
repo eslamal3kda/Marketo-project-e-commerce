@@ -57,7 +57,7 @@ export default function FAQPage() {
             <div className="container">
                 <ol>
                     {FAQ.map((faq) => (
-                        <div className="list-container">
+                        <div key={faq.id} className="list-container">
                             <li>{faq.faqTitle}</li>
                             <p>{faq.faqDescription}</p>
                         </div>

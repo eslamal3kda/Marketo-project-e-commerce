@@ -9,6 +9,7 @@ export default function BlogCategorySection() {
             description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae quia eveniet maiores! Reiciendis nostrum, mollitia cumque quae illo nesciunt qui!",
             imgURL: "./src/assets/images/blogs/blog_1.jpg",
             date: { day: 26, month: "feb" },
+            category: { path: "", label: "All" },
         },
         {
             id: 2,
@@ -16,6 +17,7 @@ export default function BlogCategorySection() {
             description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae quia eveniet maiores! Reiciendis nostrum, mollitia cumque quae illo nesciunt qui!",
             imgURL: "./src/assets/images/blogs/blog_2.jpg",
             date: { day: 19, month: "may" },
+            category: { path: "", label: "All" },
         },
         {
             id: 3,
@@ -23,6 +25,7 @@ export default function BlogCategorySection() {
             description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae quia eveniet maiores! Reiciendis nostrum, mollitia cumque quae illo nesciunt qui!",
             imgURL: "./src/assets/images/blogs/blog_3.jpg",
             date: { day: 23, month: "mar" },
+            category: { path: "", label: "All" },
         },
         {
             id: 4,
@@ -30,6 +33,7 @@ export default function BlogCategorySection() {
             description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae quia eveniet maiores! Reiciendis nostrum, mollitia cumque quae illo nesciunt qui!",
             imgURL: "./src/assets/images/blogs/blog_4.jpg",
             date: { day: 9, month: "Apr" },
+            category: { path: "", label: "All" },
         },
         {
             id: 5,
@@ -37,6 +41,7 @@ export default function BlogCategorySection() {
             description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae quia eveniet maiores! Reiciendis nostrum, mollitia cumque quae illo nesciunt qui!",
             imgURL: "./src/assets/images/blogs/post-1.jpg",
             date: { day: 10, month: "Sep" },
+            category: { path: "", label: "All" },
         },
         {
             id: 6,
@@ -44,6 +49,7 @@ export default function BlogCategorySection() {
             description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae quia eveniet maiores! Reiciendis nostrum, mollitia cumque quae illo nesciunt qui!",
             imgURL: "./src/assets/images/blogs/post-2.jpg",
             date: { day: 2, month: "aug" },
+            category: { path: "", label: "All" },
         },
         {
             id: 7,
@@ -51,11 +57,24 @@ export default function BlogCategorySection() {
             description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae quia eveniet maiores! Reiciendis nostrum, mollitia cumque quae illo nesciunt qui!",
             imgURL: "./src/assets/images/blogs/post-3.jpg",
             date: { day: 16, month: "Jan" },
+            category: { path: "", label: "All" },
         },
     ];
+    const blogCateg = [
+        { id: 1, blogCategLabel: "All" },
+        { id: 2, blogCategLabel: "Electronics" },
+        { id: 3, blogCategLabel: "Office & Security" },
+        { id: 4, blogCategLabel: "Men's Fashion" },
+        { id: 5, blogCategLabel: "Women's Fashion" },
+    ];
     return (
-        <section className="blogs-container">
-            {blogs.map((blog)=><BlogCard key={blog.id} title={blog.title} description={blog.description} imgURL={blog.imgURL} date={blog.date}/>)}
-        </section>
+        <>
+            <section className="blogs-container">
+
+                    {blogs.map((blog) => (
+                        <BlogCard key={blog.id} title={blog.title} description={blog.description} imgURL={blog.imgURL} date={blog.date} />
+                    ))}
+            </section>
+        </>
     );
 }

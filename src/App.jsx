@@ -15,6 +15,7 @@ import { Toaster } from "react-hot-toast";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import BlogsPage from "./pages/BlogsPage/BlogsPage";
 import BlogCategorySection from "./components/BlogCategorySection/BlogCategorySection";
+import SingleBlog from "./components/SingleBlog/SingleBlog";
 
 export default function App() {
     const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ export default function App() {
                 {
                     path: "/blogs", element: <BlogsPage />, children: [
                     {path: ":blog-category?" , element:<BlogCategorySection />},
+                    {path: ":blog-category/:id" , element:<SingleBlog />},
                     {path: "*" , element:<section className='blogs-container'> <h1>page not founded</h1>  </section>},
                 ] },
                 {

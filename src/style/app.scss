@@ -7,7 +7,7 @@
 @import '../layout/2-Footer/footer-responsive';
 @import '../pages/HomePage/homepage';
 @import '../components/SelectMenu/selectMenu';
-// @import '../components/EmailSubmitInput/emailSibmitInput';
+@import '../components/EmailSubmitInput/emailSubmitInput';
 @import '../components/paginationSection/paginationSection';
 @import '../components/sponsors/sponsors';
 @import '../components/OfferComponent/offerComponent';
@@ -28,6 +28,7 @@
 @import '../components/Loader/loader';
 @import '../components/WrapperInput/wrapperInput';
 @import '../components/BlogCard/blogCard';
+@import '../components/SingleBlog/singleBlog';
 @import '../pages/FAQPage/faqPage';
 @import '../pages/ProductsPage/productsPage';
 @import '../pages/ShopPage/shopPage';

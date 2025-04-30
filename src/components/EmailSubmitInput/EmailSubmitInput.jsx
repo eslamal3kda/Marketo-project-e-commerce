@@ -2,7 +2,6 @@ import { Field, Form, Formik } from "formik";
 import React from "react";
 import CustomBTN from "../customBTN/CustomBTN";
 import { useNavigate } from "react-router-dom";
-import "./emailSubmitInput.css"
 
 export default function EmailSubmitInput() {
   const navigate = useNavigate()

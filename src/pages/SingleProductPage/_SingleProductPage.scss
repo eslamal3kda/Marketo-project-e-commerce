@@ -1,0 +1,133 @@
+.single-product-page {
+    margin-block: 3rem;
+    .single-product-container {
+        display: flex;
+        gap: 3rem;
+        // .single-product-image, .single-product-info  {
+        //     width: calc((100% - 3rem) / 2);
+        // }
+        // .single-product-image {
+        //     padding: 1rem;
+        //     background-image: url("/images/watch_2.png");
+        //     background-position: center;
+        //     background-size: contain;
+        //     background-repeat: no-repeat;
+        //     background-color: #EEE;
+        // }
+        .single-product-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            &-header {
+                padding-bottom: 10px;
+                border-bottom: 1px solid #0003;
+                h2 {
+                    text-transform: capitalize;
+                    color: $dark-color;
+                }
+                .rating {
+                    display: flex;
+                    gap: 1rem;
+                    .stars {
+                        color: gold;
+                    }
+                    .review {
+                        color: #aaa;
+                    }
+                }
+            }
+            &-details {
+                padding-bottom: 10px;
+                border-bottom: 1px solid #0003;
+                .price {
+                    display: flex;
+                    gap: 1rem;
+                    margin-bottom: 1rem;
+                    del {
+                        color: #aaa;
+                        font-size: 1rem;
+                    }
+                    span {
+                        font-size: 1.4rem;
+                        color: $offer-color;
+                    }
+                }
+                p {
+                    color: #777;
+                }
+            }
+            &-more-details {
+                span {
+                    color: #777;
+                    text-transform: uppercase;
+                }
+                strong {
+                    color: $dark-color;
+                    text-transform: uppercase;
+                }
+            }
+            &-btns {
+                display: flex;
+                gap: 1rem;
+                padding-bottom: 10px ;
+                border-bottom: 1px solid #0003;
+                &-count {
+                    display: flex;
+                    span {
+                        display: inline-block;
+                        width: 3rem;
+                        height: 3rem;
+                        background-color: #EEE;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        &:nth-child(2) {
+                            width: 5rem;
+                            border-inline: 1px solid #0002;
+                        }
+                    }
+                }
+                button {
+                    background-color: $main-color;
+                    color: #FFF;
+                }
+            }
+            &-social {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                .icon {
+                    width: 2.5rem;
+                    height: 2.5rem ;
+                    border: 1px solid #003;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: 0.3s;
+                    svg {
+                        font-size: 1.4rem;
+                    }
+                    &:hover {
+                        color: $main-color;
+                        border-color: $main-color;
+                    }
+                }
+                .add-to-wishlist {
+                    display: flex;
+                    align-items: center;
+                    text-transform: capitalize;
+                    margin-left: 1rem;
+                    cursor: pointer;
+                    color: $main-color;
+                    transition: 0.3s;
+                    &:hover {
+                        color: $dark-color;
+                    }
+                }
+            }
+        }
+    }
+}

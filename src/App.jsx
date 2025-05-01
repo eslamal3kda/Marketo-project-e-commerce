@@ -16,6 +16,7 @@ import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import BlogsPage from "./pages/BlogsPage/BlogsPage";
 import BlogCategorySection from "./components/BlogCategorySection/BlogCategorySection";
 import SingleBlog from "./components/SingleBlog/SingleBlog";
+import SingleProductPage from "./pages/SingleProductPage/SingleProductPage";
 
 export default function App() {
     const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ export default function App() {
                 { path: "/contact", element: <ContactPage /> },
                 { path: "/about-us", element: <AboutUsPage /> },
                 { path: "/products", element: <ProductsPage /> },
+                { path: "/products/:id/:product-categ", element: <SingleProductPage /> },
                 { path: "/terms-and-conditions", element: <TermsAndConditionsPage /> },
                 {
                     path: "/blogs", element: <BlogsPage />, children: [

@@ -72,6 +72,13 @@
             font-size: 0.8rem;
             color: #999;
         }
+        & > strong {
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                color: $main-color;
+            }
+        }
         &-price {
             display: flex;
             gap: 0.5rem;

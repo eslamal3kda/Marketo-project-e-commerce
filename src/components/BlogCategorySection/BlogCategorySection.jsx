@@ -60,13 +60,13 @@ export default function BlogCategorySection() {
             category: { path: "securityBlogs", label: "Office & Security" },
         },
     ];
-    const blogCateg = [
-        { id: 1, blogCategLabel: "All" },
-        { id: 2, blogCategLabel: "Electronics" },
-        { id: 3, blogCategLabel: "Office & Security" },
-        { id: 4, blogCategLabel: "Men's Fashion" },
-        { id: 5, blogCategLabel: "Women's Fashion" },
-    ];
+    // const blogCateg = [
+    //     { id: 1, blogCategLabel: "All" },
+    //     { id: 2, blogCategLabel: "Electronics" },
+    //     { id: 3, blogCategLabel: "Office & Security" },
+    //     { id: 4, blogCategLabel: "Men's Fashion" },
+    //     { id: 5, blogCategLabel: "Women's Fashion" },
+    // ];
     return (
         <>
             <section className="blogs-container">

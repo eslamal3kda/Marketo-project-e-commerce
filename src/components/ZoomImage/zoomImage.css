@@ -1,0 +1,17 @@
+.zoom-image {
+    width: 500px;
+    height: 500px;
+    background-size: 60%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: grab;
+    /* border: 1px solid #0003; */
+    background-color: #fafafa;
+  }
+
+  .zoom-image:hover {
+    background-size: 130%;
+  }
+  

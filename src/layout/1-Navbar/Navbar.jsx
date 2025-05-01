@@ -100,14 +100,14 @@ export default function Navbar() {
                             <NavLink to={"/blogs"}>
                                 blogs <IoIosArrowDown />
                             </NavLink>
-                            <ul>
+                            {/* <ul>
                                 <li>
                                     <Link to={"blogs"}>Blogs</Link>
                                 </li>
                                 <li>
-                                    <Link to={"single-blog"}>Single Blog</Link>
+                                    <Link to={"/blogs/:blog-category/:id"}>Single Blog</Link>
                                 </li>
-                            </ul>
+                            </ul> */}
                         </li>
                         {/* <li className="nav_lists">
                             <NavLink to={"/dashboard"}>

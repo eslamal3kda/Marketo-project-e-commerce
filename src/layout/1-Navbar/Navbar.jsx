@@ -12,6 +12,8 @@ import SearchComponent from "../../components/SearchComponent/SearchComponent";
 // import GallerySubList from "../../components/GallerySubList/GallerySubList";
 // import SearchBox from "../../components/searchBox/SearchBox";
 import { HiOutlineMenu } from "react-icons/hi";
+import NavMenu from "./NavMenu";
+import { useState } from "react";
 
 // const categoryOptions = [
 //     { value: "electronics", label: "Electronics" },
@@ -26,6 +28,7 @@ import { HiOutlineMenu } from "react-icons/hi";
 // ];
 
 export default function Navbar() {
+    const [isMenuOpen,setIsMenuOpen] = useState(false)
     return (
         <header>
             <nav className="">
@@ -59,7 +62,7 @@ export default function Navbar() {
                             </NavLink>
                         </li>
                         <li className="nav_lists">
-                            <NavLink to={"/pages"}>
+                            <NavLink to={""}>
                                 pages <IoIosArrowDown />
                             </NavLink>
                             <ul>
@@ -116,7 +119,7 @@ export default function Navbar() {
                         </li> */}
                     </ul>
                     <div className="nav-icons">
-                        <HiOutlineMenu className="menuIcon" />
+                        <HiOutlineMenu className="menuIcon" onClick={()=>setIsMenuOpen(true)} />
                         <Link to={"wishlist"}>
                             <div className="liked-icon">
                                 <div className="like-notify">0</div>
@@ -144,6 +147,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
+            <NavMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         </header>
     );
 }

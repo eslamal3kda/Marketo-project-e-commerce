@@ -5,6 +5,7 @@ import { FaGooglePlusG, FaHeart, FaInstagram, FaRegHeart, FaStar } from "react-i
 import { IoLogoFacebook } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
 import { BsFacebook } from "react-icons/bs";
+import ContactBar from "../../components/contactBar/ContactBar";
 
 export default function SingleProductPage() {
     const [count, setCount] = useState(0);
@@ -96,6 +97,7 @@ export default function SingleProductPage() {
                     </div>
                 </section>
             </div>
+            <ContactBar />
         </main>
     );
 }

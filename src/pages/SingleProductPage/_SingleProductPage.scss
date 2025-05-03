@@ -3,17 +3,6 @@
     .single-product-container {
         display: flex;
         gap: 3rem;
-        // .single-product-image, .single-product-info  {
-        //     width: calc((100% - 3rem) / 2);
-        // }
-        // .single-product-image {
-        //     padding: 1rem;
-        //     background-image: url("/images/watch_2.png");
-        //     background-position: center;
-        //     background-size: contain;
-        //     background-repeat: no-repeat;
-        //     background-color: #EEE;
-        // }
         .single-product-info {
             display: flex;
             flex-direction: column;
@@ -96,23 +85,27 @@
             &-social {
                 display: flex;
                 align-items: center;
-                gap: 0.5rem;
-                .icon {
-                    width: 2.5rem;
-                    height: 2.5rem ;
-                    border: 1px solid #003;
-                    border-radius: 50%;
-                    cursor: pointer;
+                gap: 1rem;
+                &-icons {
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    transition: 0.3s;
-                    svg {
-                        font-size: 1.4rem;
-                    }
-                    &:hover {
-                        color: $main-color;
-                        border-color: $main-color;
+                    gap: 0.5rem;
+                    .icon {
+                        width: 2.5rem;
+                        height: 2.5rem ;
+                        border: 1px solid #003;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: 0.3s;
+                        svg {
+                            font-size: 1.4rem;
+                        }
+                        &:hover {
+                            color: $main-color;
+                            border-color: $main-color;
+                        }
                     }
                 }
                 .add-to-wishlist {
@@ -127,6 +120,65 @@
                         color: $dark-color;
                     }
                 }
+            }
+        }
+    }
+}
+
+
+@media(max-width:399px) {
+    .single-product-page {
+        .single-product-container {
+            flex-direction: column;
+            .zoom-image {
+                width: 100%;
+                height: 400px;
+            }
+            .single-product-info {
+                &-btns {
+                    flex-direction: column;
+                }
+                &-social {
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+    }
+}
+@media(min-width:400px) {
+    .single-product-page {
+        .single-product-container {
+            flex-direction: column;
+            .zoom-image {
+                width: 100%;
+                height: 400px;
+            }
+        }
+    }
+}
+@media(min-width:500px) {
+    .single-product-page {
+        .single-product-container {
+            flex-direction: column;
+            .zoom-image {
+                width: 400px;
+            }
+        }
+    }
+}
+@media(min-width:950px) {
+    .single-product-page {
+        .single-product-container {
+            flex-direction: row;
+        }
+    }
+}
+@media(min-width:1200px) {
+    .single-product-page {
+        .single-product-container {
+            .zoom-image {
+                width: 500px;
+                height:500px;
             }
         }
     }

@@ -63,17 +63,28 @@ export default function SingleProductPage() {
                             </div>
                         </div>
                         <div className="single-product-info-social">
-                            <div className="icon">
-                                <BsFacebook />
-                            </div>
-                            <div className="icon">
-                                <FaXTwitter />
-                            </div>
-                            <div className="icon">
-                                <FaInstagram />
-                            </div>
-                            <div className="icon">
-                                <FaGooglePlusG />
+                            <div className="single-product-info-social-icons">
+                            <a href="">
+                                <div className="icon">
+                                    <BsFacebook />
+                                </div>
+                            </a>
+                            <a href="">
+                                <div className="icon">
+                                    <FaXTwitter />
+                                </div>
+                            </a>
+                            <a href="">
+                                <div className="icon">
+                                    <FaInstagram />
+                                </div>
+                            </a>
+                            <a href="">
+                                <div className="icon">
+                                    <FaGooglePlusG />
+                                </div>
+                            </a>
+
                             </div>
                             <div className="add-to-wishlist">
                                 <span>

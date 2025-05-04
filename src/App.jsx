@@ -17,6 +17,7 @@ import BlogsPage from "./pages/BlogsPage/BlogsPage";
 import BlogCategorySection from "./components/BlogCategorySection/BlogCategorySection";
 import SingleBlog from "./components/SingleBlog/SingleBlog";
 import SingleProductPage from "./pages/SingleProductPage/SingleProductPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
 
 export default function App() {
     const queryClient = new QueryClient();
@@ -52,6 +53,7 @@ export default function App() {
                 { path: "*", element: <h2 className="page-test">Page Not Founded</h2> },
             ],
         },
+        { path: "/login", element: <LoginPage /> },
     ]);
     return (
         <QueryClientProvider client={queryClient}>

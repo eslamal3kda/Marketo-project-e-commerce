@@ -34,7 +34,7 @@ export default function NavMenu({isMenuOpen,setIsMenuOpen}) {
                     </li>
                     <li>
                         <div onClick={()=>handleMenu("pages")}>
-                            <span>pages</span> <button onClick={()=>handleMenu("pages")}>{ispagesMenu === "pages"?'-':'+'}</button>
+                            <span>pages</span> <button >{ispagesMenu === "pages"?'-':'+'}</button>
                         </div>
                         <ul className={`sub-menu ${ispagesMenu === "pages" ?"open":""}`}>
                             <li onClick={()=>handleNavigation("/about-us")}>
@@ -89,6 +89,11 @@ export default function NavMenu({isMenuOpen,setIsMenuOpen}) {
                     <li onClick={()=>handleNavigation("/blogs")}>
                         <Link >
                             <span>blogs</span> <span>&gt;</span>
+                        </Link>
+                    </li>
+                    <li onClick={()=>handleNavigation("/login")}>
+                        <Link >
+                            <span>login/register</span> <span>&gt;</span>
                         </Link>
                     </li>
                 </ul>

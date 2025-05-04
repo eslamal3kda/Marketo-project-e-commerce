@@ -4,7 +4,7 @@ export default function Logo() {
     return (
         <div className="logo">
             <h2>
-                <Link to={""}>
+                <Link to={"/"}>
                     <div className="anime-logo">
                         <span className="logo-name">Mark</span>
                     </div>

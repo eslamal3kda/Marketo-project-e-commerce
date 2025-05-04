@@ -6,7 +6,6 @@
 @import '../layout/1-Navbar/navMenu';
 @import '../layout/2-Footer/footer';
 @import '../layout/2-Footer/footer-responsive';
-@import '../pages/HomePage/homepage';
 @import '../components/SelectMenu/selectMenu';
 @import '../components/EmailSubmitInput/emailSubmitInput';
 @import '../components/paginationSection/paginationSection';
@@ -14,7 +13,6 @@
 @import '../components/OfferComponent/offerComponent';
 @import '../components/featuredProducts/featuredProducts';
 @import '../components/ProductCard/productCard';
-@import '../pages/HomePage/homePage-responsive';
 @import '../components/HeroSection/heroSection';
 @import '../components/TodayGadgetsSection/todayGadgetsSection.scss';
 @import '../components/BestDeals/bestDeals';
@@ -30,6 +28,9 @@
 @import '../components/WrapperInput/wrapperInput';
 @import '../components/BlogCard/blogCard';
 @import '../components/SingleBlog/singleBlog';
+@import '../components/loginBox/loginBox';
+@import '../pages/HomePage/homepage';
+@import '../pages/HomePage/homePage-responsive';
 @import '../pages/FAQPage/faqPage';
 @import '../pages/ProductsPage/productsPage';
 @import '../pages/ShopPage/shopPage';
@@ -37,6 +38,7 @@
 @import '../pages/TermsAndConditionsPage/termsAndConditions';
 @import '../pages/AboutPage/aboutUsPage';
 @import '../pages/BlogsPage/blogsPage';
+@import '../pages/LoginPage/loginPage';
 @import '../pages/SingleProductPage/SingleProductPage';
 
 

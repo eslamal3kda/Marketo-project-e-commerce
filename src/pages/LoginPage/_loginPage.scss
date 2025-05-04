@@ -1,0 +1,147 @@
+.login-page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+        background: linear-gradient(270deg, $main-color  , $dark-main-color);
+        z-index: -1;
+        clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            0% 100%
+        );
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 100%;
+        background: linear-gradient(45deg, $main-color  , $dark-main-color);
+        z-index: -1;
+        clip-path: polygon(
+            100% 0%,
+            100% 100%,
+            0% 0%
+        );
+    }
+}
+
+@media(max-width:419px) {
+    .login-page {
+        &::before{
+            display: none;
+        }
+        &::after{
+            width: 90%;
+        }
+        .login-box {
+            width: 95%;
+            height: 75%;
+            &-image {
+                display: none;
+            }
+            &-content  {
+                width: 100%;
+            }
+        }
+    }
+}
+@media(min-width:420px) {
+    .login-page {
+        &::before{
+            display: none;
+        }
+        &::after{
+            width: 80%;
+        }
+        .login-box {
+            width: 85%;
+            height: 75%;
+            &-image {
+                display: none;
+            }
+            &-content  {
+                width: 100%;
+            }
+        }
+    }
+}
+@media(min-width:550px) {
+    .login-page {
+        &::after{
+            width: 40%;
+        }
+        .login-box {
+            width: 450px;
+        }
+    }
+}
+@media(min-width:768px) {
+    .login-page {
+        &::before{
+            display: block;
+            width: 50%;
+            clip-path: polygon(
+                0% 0%,
+                100% 100%,
+                0% 100%
+            );
+        }
+        &::after{
+            width: 50%;
+        }
+        .login-box {
+            width: 90%;
+            height: 75%;
+
+            &-image {
+                display: block;
+                width: 50%;
+            }
+            &-content  {
+                width: 50%;
+            }
+        }
+    }
+}
+@media(min-width:850px) {
+    .login-page {
+        .login-box {
+            width: 85%;
+        }
+    }
+}
+@media(min-width:1024px) {
+    .login-page {
+        &::before{
+            width: 30%;
+            clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                0% 100%
+            );
+        }
+        &::after{
+            width: 30%;
+        }
+        .login-box {
+            width: 80%;
+            &-image {
+                width: 60%;
+            }
+            &-content  {
+                width: 40%;
+            }
+        }
+    }
+}

@@ -3,7 +3,7 @@ import { FaRegHeart } from "react-icons/fa6";
 import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter } from "react-icons/io5";
 import { SlHandbag } from "react-icons/sl";
 import { TbTruckDelivery } from "react-icons/tb";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Logo from "../../components/Logo/Logo";
 import { IoIosArrowDown } from "react-icons/io";
 // import Select from "react-select";
@@ -29,6 +29,7 @@ import { useState } from "react";
 
 export default function Navbar() {
     const [isMenuOpen,setIsMenuOpen] = useState(false)
+    const navigate = useNavigate()
     return (
         <header>
             <nav className="">
@@ -49,7 +50,7 @@ export default function Navbar() {
                             <IoLogoInstagram className="instagram" />
                         </div>
                     </div>
-                    <div className="login-register">
+                    <div className="login-register" onClick={()=> navigate("/login")}>
                         <span>Login/Register</span>
                     </div>
                 </div>
@@ -62,7 +63,7 @@ export default function Navbar() {
                             </NavLink>
                         </li>
                         <li className="nav_lists">
-                            <NavLink to={""}>
+                            <NavLink to={"/pages"}>
                                 pages <IoIosArrowDown />
                             </NavLink>
                             <ul>

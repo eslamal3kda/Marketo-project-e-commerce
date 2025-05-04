@@ -47,29 +47,29 @@ header {
             justify-content: space-between;
             align-items: center;
             padding-block: 1em;
-            .logo {
-                .anime-logo {
-                    display: inline-flex;
-                }
-                .logo-name {
-                    font-family: $sub-font;
-                    color: $main-color;
-                    &:hover {
-                        animation: rotate-logo 2s alternate 2;
-                    }
-                }
-            }
-            @keyframes rotate-logo {
-                0% {
-                    rotate: 0deg;
-                }
-                50% {
-                    rotate: -3deg;
-                }
-                100% {
-                    rotate: 3deg;
-                }
-            }
+            // .logo {
+            //     .anime-logo {
+            //         display: inline-flex;
+            //     }
+            //     .logo-name {
+            //         font-family: $sub-font;
+            //         color: $main-color;
+            //         &:hover {
+            //             animation: rotate-logo 2s alternate 2;
+            //         }
+            //     }
+            // }
+            // @keyframes rotate-logo {
+            //     0% {
+            //         rotate: 0deg;
+            //     }
+            //     50% {
+            //         rotate: -3deg;
+            //     }
+            //     100% {
+            //         rotate: 3deg;
+            //     }
+            // }
 
             ul {
                 display: flex;
@@ -352,5 +352,32 @@ header {
                 }
             }
         }
+    }
+}
+
+.logo {
+    a {
+        color: $dark-color;
+    }
+    .anime-logo {
+        display: inline-flex;
+    }
+    .logo-name {
+        font-family: $sub-font;
+        color: $main-color;
+        &:hover {
+            animation: rotate-logo 2s alternate 2;
+        }
+    }
+}
+@keyframes rotate-logo {
+    0% {
+        rotate: 0deg;
+    }
+    50% {
+        rotate: -3deg;
+    }
+    100% {
+        rotate: 3deg;
     }
 }

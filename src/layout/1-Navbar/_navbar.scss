@@ -47,29 +47,7 @@ header {
             justify-content: space-between;
             align-items: center;
             padding-block: 1em;
-            // .logo {
-            //     .anime-logo {
-            //         display: inline-flex;
-            //     }
-            //     .logo-name {
-            //         font-family: $sub-font;
-            //         color: $main-color;
-            //         &:hover {
-            //             animation: rotate-logo 2s alternate 2;
-            //         }
-            //     }
-            // }
-            // @keyframes rotate-logo {
-            //     0% {
-            //         rotate: 0deg;
-            //     }
-            //     50% {
-            //         rotate: -3deg;
-            //     }
-            //     100% {
-            //         rotate: 3deg;
-            //     }
-            // }
+
 
             ul {
                 display: flex;
@@ -84,9 +62,8 @@ header {
                     cursor: pointer;
                     flex-direction: column;
                     position: relative;
-                    a {
+                    a , span {
                         display: flex;
-                        // font-size: 1.1em;
                         color: #2d2d2dd2;
                         transition: 0.4s;
                         width: 100%;

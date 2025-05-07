@@ -20,6 +20,7 @@ import SingleProductPage from "./pages/SingleProductPage/SingleProductPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import WishlistPage from "./pages/WishlistPage/WishlistPage";
 import ShoppingCartPage from "./pages/ShoppingCartPage/ShoppingCartPage";
+import NoFoundedPage from "./pages/NoFoundedPage/NoFoundedPage";
 
 export default function App() {
     const queryClient = new QueryClient();
@@ -29,7 +30,6 @@ export default function App() {
             element: <Layout />,
             children: [
                 { path: "", element: <HomePage /> },
-                { path: "/pages", element: <h2 className="page-test">Pages Page</h2> },
                 { path: "/shop", element: <ShopPage /> },
                 { path: "/faq", element: <FAQPage /> },
                 { path: "/contact", element: <ContactPage /> },
@@ -53,7 +53,7 @@ export default function App() {
                         </ProtectedRoute>
                     ),
                 },
-                { path: "*", element: <h2 className="page-test">Page Not Founded</h2> },
+                { path: "*", element: <NoFoundedPage /> },
             ],
         },
         { path: "/login", element: <LoginPage /> },

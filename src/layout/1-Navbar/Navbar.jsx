@@ -63,9 +63,9 @@ export default function Navbar() {
                             </NavLink>
                         </li>
                         <li className="nav_lists">
-                            <NavLink to={"/pages"}>
-                                pages <IoIosArrowDown />
-                            </NavLink>
+                            {/* <NavLink to={"/pages"}> */}
+                                <span>pages <IoIosArrowDown /></span>
+                            {/* </NavLink> */}
                             <ul>
                                 <li>
                                     <Link to={"about-us"}>About Us</Link>

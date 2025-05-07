@@ -1,0 +1,189 @@
+.shopping-cart-page {
+    .container {
+        & > h2 {
+            text-transform: capitalize;
+            margin-bottom: 2rem;
+        }
+        .shopping-cart-container {
+            display: flex;
+            gap: 1rem;
+            .shopping-cart-table {
+                margin-bottom: 3rem;
+                width: 70%;
+                table {
+                    width: 100%;
+                    border-spacing: 0px; 
+                    th,td {
+                        padding: 16px;
+                    }
+                    th {
+                        text-transform: uppercase;
+                    }
+                    td {
+                        text-align: center;
+                        & > svg {
+                            font-size: 1.2rem;
+                            color: $error-color;
+                            cursor: pointer;
+                        }
+                        img {
+                            width: 100px;
+                        }
+                        .quantity-btns {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            span {
+                                padding: 6px 12px;
+                                background-color: #EEE;
+                                border-left:1px solid #ccc ;
+                                &:nth-child(1){
+                                    border-left:0 ;
+                                }
+                                &:nth-child(2){
+                                    width: 3rem;
+                                }
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                form {
+                    margin-top: 3rem;
+                    width: 600px;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    input {
+                        flex-grow: 1;
+                        padding: 16px;
+                        border-radius: 8px;
+                        border: 0;
+                        outline: 0;
+                        background-color: #EEE;
+                    }
+                    button {
+                        padding: 16px;
+                        &:nth-of-type(1){
+                            background-color: $main-color;
+                            color: #FFF;
+                            transition: 0.3s;
+                            &:hover{
+                                background-color: $dark-main-color
+                            }
+                        }
+                        &:nth-of-type(2){
+                            background-color: $dark-color;
+                            color: #FFF;
+                            transition: 0.3s;
+                            &:hover {
+                                background-color: rgba($color: $dark-color, $alpha: 0.8);
+                            }
+                        }
+                    }
+                }
+            }
+            .cart-product {
+                display: none;
+            }
+            .shopping-cart-banner {
+                flex-grow: 1;
+                .banner {
+                    padding: 1rem;
+                    border: 1px solid rgba($color: $main-color, $alpha: 0.2);
+                    border-radius: 10px;
+                    p {
+                        padding: 6px;
+                        font-size: 1.2rem;
+                        display: flex;
+                        justify-content: space-between;
+                        text-transform: capitalize;
+                        strong , span {
+                            // color: $main-color;
+                        }
+                        span {
+                            // opacity: 0.8;
+                            opacity: 0.6;
+                        }
+                        &:nth-of-type(3){
+                            border-bottom: 1px solid #0003;
+                            padding-bottom: 3rem;
+                        }
+                        &:last-of-type{
+                            padding-block: 20px;
+                        }
+                    }
+                    button {
+                        width: 100%;
+                        background-color: $main-color;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:499px) {
+    .shopping-cart-page {
+        .container {
+            .shopping-cart-container {
+                flex-direction: column;
+                .shopping-cart-table  {
+                    display: none;
+                }
+                .cart-product {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+@media(min-width:500px) {
+    .shopping-cart-page {
+        .container {
+            .shopping-cart-container {
+                flex-direction: column;
+                .shopping-cart-table  {
+                    display: none;
+                }
+                .cart-product {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+@media(min-width:750px) {
+    .shopping-cart-page {
+        .container {
+            .shopping-cart-container {
+                .shopping-cart-table  {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .cart-product {
+                    display: none;
+                }
+                .shopping-cart-banner {
+                    width: 400px;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+}
+@media(min-width:1100px) {
+    .shopping-cart-page {
+        .container {
+            .shopping-cart-container {
+                flex-direction: row;
+                .shopping-cart-banner {
+                    width: auto;
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+}

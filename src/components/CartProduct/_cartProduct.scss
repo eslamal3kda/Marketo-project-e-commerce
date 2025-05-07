@@ -1,0 +1,56 @@
+.cart-product {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #0003;
+    position: relative;
+    &-image {
+        width: 150px;
+        img {
+            width: 100%;
+        }
+    }
+    &-name {
+        text-transform: capitalize;
+    }
+    &-price {
+        color: $offer-color;
+    }
+    .in-stock {
+        color: $main-color;
+    }
+    .out-of-stock {
+        color: $error-color;
+    }
+    .quantity-btns {
+        display: flex;
+        gap: 2px;
+        span {
+            display: inline-block;
+            background-color: #EEE;
+            padding: 10px ;
+            cursor: pointer;
+            text-align: center;
+            width: 3rem;
+            &:nth-of-type(2) {
+                width: 4rem;
+            }
+        }
+    }
+    button {
+        padding: 10px 20px;
+        background-color: $dark-main-color;
+        color: #FFF;
+    }
+    svg {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: $error-color;
+        cursor: pointer;
+        font-size: 2rem;
+    }
+}

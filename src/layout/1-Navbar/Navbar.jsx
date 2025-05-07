@@ -96,7 +96,7 @@ export default function Navbar() {
                                     <Link to={"wishlist"}>Wishlist</Link>
                                 </li>
                                 <li>
-                                    <Link to={"track-order"}>Track Order</Link>
+                                    <Link to={"shopping-cart"}>Shopping Cart</Link>
                                 </li>
                             </ul>
                         </li>

@@ -18,6 +18,8 @@ import BlogCategorySection from "./components/BlogCategorySection/BlogCategorySe
 import SingleBlog from "./components/SingleBlog/SingleBlog";
 import SingleProductPage from "./pages/SingleProductPage/SingleProductPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import WishlistPage from "./pages/WishlistPage/WishlistPage";
+import ShoppingCartPage from "./pages/ShoppingCartPage/ShoppingCartPage";
 
 export default function App() {
     const queryClient = new QueryClient();
@@ -35,6 +37,8 @@ export default function App() {
                 { path: "/products", element: <ProductsPage /> },
                 { path: "/products/:id/:product-categ", element: <SingleProductPage /> },
                 { path: "/terms-and-conditions", element: <TermsAndConditionsPage /> },
+                { path: "/wishlist", element: <WishlistPage /> },
+                { path: "/shopping-cart", element: <ShoppingCartPage /> },
                 {
                     path: "/blogs", element: <BlogsPage />, children: [
                     {path: ":blog-category?" , element:<BlogCategorySection />},
@@ -49,7 +53,6 @@ export default function App() {
                         </ProtectedRoute>
                     ),
                 },
-                { path: "/wishlist", element: <h2 className="page-test">Wishlist Page</h2> },
                 { path: "*", element: <h2 className="page-test">Page Not Founded</h2> },
             ],
         },

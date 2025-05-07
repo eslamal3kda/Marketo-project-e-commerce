@@ -79,9 +79,9 @@ export default function NavMenu({isMenuOpen,setIsMenuOpen}) {
                                     <span>wishlist</span> <span>&gt;</span>
                                 </Link>
                             </li>
-                            <li onClick={()=>handleNavigation("/track-order")}>
+                            <li onClick={()=>handleNavigation("/shopping-cart")}>
                                 <Link >
-                                    <span>track order</span> <span>&gt;</span>
+                                    <span>Shopping Cart</span> <span>&gt;</span>
                                 </Link>
                             </li>
                         </ul>

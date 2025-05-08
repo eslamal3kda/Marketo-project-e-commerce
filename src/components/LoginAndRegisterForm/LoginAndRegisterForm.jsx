@@ -9,7 +9,7 @@ export default function LoginAndRegisterForm() {
         return (
             <>
                 <div className="login-form">
-                    <h4>login</h4>
+                    <h4>register</h4>
                     <Formik>
                         {() => (
                             <Form>

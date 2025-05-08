@@ -14,6 +14,7 @@ import SearchComponent from "../../components/SearchComponent/SearchComponent";
 import { HiOutlineMenu } from "react-icons/hi";
 import NavMenu from "./NavMenu";
 import { useState } from "react";
+import CartMenu from "./CartMenu";
 
 // const categoryOptions = [
 //     { value: "electronics", label: "Electronics" },
@@ -29,6 +30,7 @@ import { useState } from "react";
 
 export default function Navbar() {
     const [isMenuOpen,setIsMenuOpen] = useState(false)
+    const [isCartMenuOpen,setIsCartMenuOpen] = useState(false)
     const navigate = useNavigate()
     return (
         <header>
@@ -104,14 +106,6 @@ export default function Navbar() {
                             <NavLink to={"/blogs"}>
                                 blogs <IoIosArrowDown />
                             </NavLink>
-                            {/* <ul>
-                                <li>
-                                    <Link to={"blogs"}>Blogs</Link>
-                                </li>
-                                <li>
-                                    <Link to={"/blogs/:blog-category/:id"}>Single Blog</Link>
-                                </li>
-                            </ul> */}
                         </li>
                         {/* <li className="nav_lists">
                             <NavLink to={"/dashboard"}>
@@ -127,7 +121,7 @@ export default function Navbar() {
                                 <FaRegHeart />
                             </div>
                         </Link>
-                        <div className="cart-icon">
+                        <div className="cart-icon" onClick={()=>setIsCartMenuOpen(true)}>
                             <div className="cart-notify">0</div>
                             <SlHandbag />
                         </div>
@@ -149,6 +143,7 @@ export default function Navbar() {
                 </div>
             </nav>
             <NavMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+            <CartMenu isCartMenuOpen={isCartMenuOpen} setIsCartMenuOpen={setIsCartMenuOpen} />
         </header>
     );
 }

@@ -30,8 +30,8 @@
         gap: 2px;
         span {
             display: inline-block;
-            background-color: #EEE;
-            padding: 10px ;
+            background-color: #eee;
+            padding: 10px;
             cursor: pointer;
             text-align: center;
             width: 3rem;
@@ -43,7 +43,7 @@
     button {
         padding: 10px 20px;
         background-color: $dark-main-color;
-        color: #FFF;
+        color: #fff;
     }
     svg {
         position: absolute;
@@ -52,5 +52,41 @@
         color: $error-color;
         cursor: pointer;
         font-size: 2rem;
+    }
+}
+.cart-product-menu {
+    padding-inline: 1rem;
+    margin-block: 10px;
+    padding-block: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    position: relative;
+    border-bottom: 1px solid #0003;
+    &-image {
+        width: 100px;
+        img {
+            width: 100%;
+        }
+    }
+    &-name {
+        text-transform: capitalize;
+    }
+    &-price {
+        color: $offer-color;
+    }
+    &-heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    svg {
+        font-size: 1.5rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: $error-color;
+        cursor: pointer;
     }
 }

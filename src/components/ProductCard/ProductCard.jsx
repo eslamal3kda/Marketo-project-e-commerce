@@ -23,16 +23,12 @@ export default function ProductCard({ title, productName, productOldPrice, produ
                 details={details}
             />
             <div className="product-card">
-                    <div className="product-card-image" >
                         {rating && (
                             <div className="product-card-rating">
-                                <FaStar />
-                                <FaStar />
-                                <FaStar />
-                                <FaStar />
-                                <FaStar />
+                                {Array.from({ length: 5 }, (_, index) => <span className="rating-icons"> {(index < rating ? <FaStar key={index} /> : <FaRegStar key={index} /> )}</span>)}
                             </div>
                         )}
+                    <div className="product-card-image" >
                         <Link to={"/products/id/product-category"}>
                             <img src={imageURL} alt="" />
                         </Link>

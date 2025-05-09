@@ -147,7 +147,7 @@ export default function CartMenu({ isCartMenuOpen, setIsCartMenuOpen }) {
             </div>
             <div className={`cart-menu-content `}>
                 {products.map((product) => (
-                    <CartProduct cartMenu productImg={product.imageURL} productName={product.productName} productPrice={product.productPrice} quantity={product.quantity + 1} />
+                    <CartProduct cartMenu key={product.id} productImg={product.imageURL} productName={product.productName} productPrice={product.productPrice} quantity={product.quantity + 1} />
                 ))}
 
                 <p className="subtotal"><span>subtotal :</span> <strong>00$</strong></p>

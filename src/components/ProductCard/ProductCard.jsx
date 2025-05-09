@@ -23,7 +23,7 @@ export default function ProductCard({ title, productName, productOldPrice, produ
                 details={details}
             />
             <div className="product-card">
-                    <div className="product-card-image" onClick={()=> navigate("/products/id/product-category")}>
+                    <div className="product-card-image" >
                         {rating && (
                             <div className="product-card-rating">
                                 <FaStar />
@@ -33,7 +33,9 @@ export default function ProductCard({ title, productName, productOldPrice, produ
                                 <FaStar />
                             </div>
                         )}
-                        <img src={imageURL} alt="" />
+                        <Link to={"/products/id/product-category"}>
+                            <img src={imageURL} alt="" />
+                        </Link>
                         {icons && (
                             <div className="product-card-image-icons">
                                 <div className="single-icon">
